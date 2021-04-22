@@ -74,7 +74,8 @@ public class CarServiceImpl implements CarService {
         car.setBrand(brandRepository.findById(carRequest.getBrandid()).get());
         car.setColors(Arrays.asList(carRequest.getColorids()).stream().map(item -> colorRepository.findById(item).get())
             .collect(Collectors.toList()));
-        car.setFurnitureColors(Arrays.asList(carRequest.getFurnitureColorids()).stream().map(id -> furnitureColorRepository.findById(id).get())
+        car.setFurnitureColors(Arrays.asList(carRequest.getFurnitureColorids()).stream().map(id ->
+                furnitureColorRepository.findById(id).get())
             .collect(Collectors.toList()));
         car.setContent(carRequest.getContent());
         return carRepository.save(car);

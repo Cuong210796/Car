@@ -1,5 +1,7 @@
 package com.example.carfromvietnam.model;
 
+
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,8 +28,6 @@ public class Car {
     private int doorNumber;
     @Column
     private int seatNumber;
-    @Column
-    private String controlScreen;
     @Column(length = 5000)
     private String content;
 
@@ -113,14 +113,6 @@ public class Car {
 
     public void setSeatNumber(int seatNumber) {
         this.seatNumber = seatNumber;
-    }
-
-    public String getControlScreen() {
-        return controlScreen;
-    }
-
-    public void setControlScreen(String controlScreen) {
-        this.controlScreen = controlScreen;
     }
 
     public String getContent() {

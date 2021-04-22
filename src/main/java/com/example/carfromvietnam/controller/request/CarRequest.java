@@ -1,5 +1,7 @@
 package com.example.carfromvietnam.controller.request;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.persistence.Column;
 
 public class CarRequest {
@@ -12,6 +14,7 @@ public class CarRequest {
     private int seatNumber;
     private String carPrice;
     private int doorNumber;
+    private MultipartFile multipartFile;
     private Long brandid;
     private Long[] colorids;
     private Long[] furnitureColorids;
@@ -23,6 +26,14 @@ public class CarRequest {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public MultipartFile getMultipartFile() {
+        return multipartFile;
+    }
+
+    public void setMultipartFile(MultipartFile multipartFile) {
+        this.multipartFile = multipartFile;
     }
 
     public int getYear() {
